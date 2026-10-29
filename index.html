@@ -51,7 +51,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 (()=>{
-const SUPABASE_URL='https://nhyotviltehihdtqmadd.supabase.co',SUPABASE_KEY='sb_publishable_6IxW65Z8PNTf5NUJb6-fLg_WH1wmK0Y',RECEIPT_BUCKET='NEON-PRIVATE';const sb=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);let cloudUser=null,cloudBusy=false;
+const SUPABASE_URL='https://nhyotviltehihdtqmadd.supabase.co',SUPABASE_KEY='sb_publishable_6IxW65Z8PNTf5NUJb6-fLg_WH1wmK0Y',RECEIPT_BUCKET='neon-private';const sb=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);let cloudUser=null,cloudBusy=false;
 function cloudStatus(t){if($('cloudStatus'))$('cloudStatus').textContent=t}
 function dataUrlBlob(url){const parts=url.split(','),mime=(parts[0].match(/:(.*?);/)||[])[1]||'image/jpeg',raw=atob(parts[1]),arr=new Uint8Array(raw.length);for(let i=0;i<raw.length;i++)arr[i]=raw.charCodeAt(i);return new Blob([arr],{type:mime})}
 async function cloudSigned(path){if(!path)return '';const {data,error}=await sb.storage.from(RECEIPT_BUCKET).createSignedUrl(path,3600);if(error)throw error;return data.signedUrl}
