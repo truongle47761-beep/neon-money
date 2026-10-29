@@ -73,7 +73,7 @@ dialog{backdrop-filter:blur(14px)}
 <dialog id="receiptDialog" style="width:min(520px,calc(100% - 24px));border:1px solid var(--line);border-radius:22px;background:var(--panel);color:var(--text);padding:20px;box-shadow:var(--shadow)">
 <div class="sectionhead"><h2>Lưu hóa đơn</h2><button type="button" class="secondary small" id="closeReceipt">✕</button></div>
 <form id="receiptForm">
-<div class="field"><label>Ảnh hóa đơn (camera hoặc thư viện)</label><input id="receiptImage" type="file" accept="image/*" capture="environment" required></div>
+<div class="field"><label>Ảnh hóa đơn (camera hoặc thư viện)</label><input id="receiptImage" type="file" accept="image/*" required><p class="hint">Chọn ảnh từ thư viện. Nếu muốn chụp mới, chọn Camera trong trình chọn ảnh của iPhone nếu có.</p></div>
 <img id="receiptPreview" class="hidden" alt="Xem trước hóa đơn" style="display:block;max-width:100%;max-height:260px;object-fit:contain;border-radius:12px;margin:8px auto 14px">
 <div class="formgrid">
 <div class="field"><label>Ngày</label><input id="receiptDate" type="date" required></div>
